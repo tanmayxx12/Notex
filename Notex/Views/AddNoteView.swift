@@ -12,6 +12,8 @@ struct AddNoteView: View {
     @Environment(\.dismiss) var dismiss
     @State private var title: String = ""
     @State private var content: String = ""
+    let category: NoteCategory
+    let subcategory: NoteSubCategory
 
     var body: some View {
         NavigationStack {
@@ -46,8 +48,8 @@ struct AddNoteView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Save") {
-//                        viewModel.addNote(title: title, content: content)
-                        dismiss() 
+                        viewModel.createNote(title: title, content: content, category: category, subcategory: subcategory)
+                        dismiss()
                     }
                     .disabled(title.isEmpty && content.isEmpty)
                 }
@@ -59,6 +61,6 @@ struct AddNoteView: View {
 }
 
 #Preview {
-    AddNoteView()
+    AddNoteView(category: .general, subcategory: .uncategorized)
         .environmentObject(NotesViewModel())
 }

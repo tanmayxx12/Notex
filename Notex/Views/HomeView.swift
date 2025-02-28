@@ -26,7 +26,7 @@ struct HomeView: View {
                     // MARK: - General Categories Section:
                     DisclosureGroup(isExpanded: $generalExpanded) {
                         NavigationLink {
-                            Text("Display All Notes in a list here.")
+                            SubCategoryNotesView(category: .general, subcategory: .allNotes)
                         } label: {
                             HStack {
                                 Image(systemName: "folder")
@@ -36,7 +36,7 @@ struct HomeView: View {
                         }
                         
                         NavigationLink {
-                            Text("Display Uncategorised Notes in a list here.")
+                            SubCategoryNotesView(category: .general, subcategory: .uncategorized)
                         } label: {
                             HStack {
                                 Image(systemName: "folder.badge.questionmark")
@@ -59,7 +59,7 @@ struct HomeView: View {
                     DisclosureGroup(isExpanded: $workExpanded) {
                         // Work
                         NavigationLink {
-                            Text("Show work notes here.")
+                            SubCategoryNotesView(category: .workAndProductivity, subcategory: .work)
                         } label: {
                             HStack {
                                 Image(systemName: "laptopcomputer")
@@ -71,7 +71,7 @@ struct HomeView: View {
                         
                         // Meeting:
                         NavigationLink {
-                            Text("Show Meeting notes here.")
+                            SubCategoryNotesView(category: .workAndProductivity, subcategory: .meeting)
                         } label: {
                             HStack {
                                 Image(systemName: "person.3")
@@ -84,6 +84,7 @@ struct HomeView: View {
                         // Tasks:
                         NavigationLink {
                             Text("Show Task notes here.")
+                            SubCategoryNotesView(category: .workAndProductivity, subcategory: .tasks)
                         } label: {
                             HStack {
                                 Image(systemName: "text.badge.checkmark")
@@ -95,7 +96,7 @@ struct HomeView: View {
                         
                         // Projects:
                         NavigationLink {
-                            Text("Show Project notes here.")
+                            SubCategoryNotesView(category: .workAndProductivity, subcategory: .projects)
                         } label: {
                             HStack {
                                 Image(systemName: "pencil.and.list.clipboard")
@@ -117,7 +118,7 @@ struct HomeView: View {
                     DisclosureGroup(isExpanded: $personalExpanded) {
                         // Personal:
                         NavigationLink {
-                            Text("Show Personal Notes here")
+                            SubCategoryNotesView(category: .personalAndLifeStyle, subcategory: .personal)
                         } label: {
                             HStack {
                                 Image(systemName: "person.and.arrow.left.and.arrow.right.outward")
@@ -127,7 +128,7 @@ struct HomeView: View {
                         }
                         // Daily Journal:
                         NavigationLink {
-                            Text("Show Daily Journal Notes here")
+                            SubCategoryNotesView(category: .personalAndLifeStyle, subcategory: .dailyJournal)
                         } label: {
                             HStack {
                                 Image(systemName: "pencil.and.scribble")
@@ -137,7 +138,7 @@ struct HomeView: View {
                         }
                         // Travel:
                         NavigationLink {
-                            Text("Show Travel Notes here")
+                            SubCategoryNotesView(category: .personalAndLifeStyle, subcategory: .travel)
                         } label: {
                             HStack {
                                 Image(systemName: "airplane.departure")
@@ -147,7 +148,7 @@ struct HomeView: View {
                         }
                         // Hobbies:
                         NavigationLink {
-                            Text("Show Hobbies Notes here")
+                            SubCategoryNotesView(category: .personalAndLifeStyle, subcategory: .hobbies)
                         } label: {
                             HStack {
                                 Image(systemName: "guitars")
@@ -157,7 +158,7 @@ struct HomeView: View {
                         }
                         // Books To Read:
                         NavigationLink {
-                            Text("Show Books To Read Notes here")
+                            SubCategoryNotesView(category: .personalAndLifeStyle, subcategory: .books)
                         } label: {
                             HStack {
                                 Image(systemName: "books.vertical")
@@ -167,7 +168,7 @@ struct HomeView: View {
                         }
                         // Movies And TV Shows:
                         NavigationLink {
-                            Text("Show Movies And TV Shows Notes here")
+                            SubCategoryNotesView(category: .personalAndLifeStyle, subcategory: .movies)
                         } label: {
                             HStack {
                                 Image(systemName: "desktopcomputer.and.macbook")
@@ -175,8 +176,6 @@ struct HomeView: View {
                                 Text("Movies And TV Shows")
                             }
                         }
-
-                       
                     } label: {
                         HStack {
                             Image(systemName: "person")
@@ -189,7 +188,7 @@ struct HomeView: View {
                     DisclosureGroup(isExpanded: $healthExpanded) {
                         // Fitness:
                         NavigationLink {
-                            Text("Show Fitness Notes here")
+                            SubCategoryNotesView(category: .health, subcategory: .fitness)
                         } label: {
                             HStack {
                                 Image(systemName: "figure.run")
@@ -199,7 +198,7 @@ struct HomeView: View {
                         }
                         // Diet and Meal Plans:
                         NavigationLink {
-                            Text("Show Diet And Meal Plans Notes here")
+                            SubCategoryNotesView(category: .health, subcategory: .diet)
                         } label: {
                             HStack {
                                 Image(systemName: "fork.knife.circle")
@@ -209,7 +208,7 @@ struct HomeView: View {
                         }
                         // Mental Health:
                         NavigationLink {
-                            Text("Show Mental Health Notes here")
+                            SubCategoryNotesView(category: .health, subcategory: .mentalHealth)
                         } label: {
                             HStack {
                                 Image(systemName: "brain.filled.head.profile")
@@ -219,7 +218,7 @@ struct HomeView: View {
                         }
                         // Medical Records:
                         NavigationLink {
-                            Text("Show Medical Record Notes here")
+                            SubCategoryNotesView(category: .health, subcategory: .medicalRecords)
                         } label: {
                             HStack {
                                 Image(systemName: "heart.text.square")
@@ -239,7 +238,7 @@ struct HomeView: View {
                     DisclosureGroup(isExpanded: $financeExpanded) {
                         // Budget and Expenses:
                         NavigationLink {
-                            Text("Show Budget And Expenses Notes here.")
+                            SubCategoryNotesView(category: .finance, subcategory: .budget)
                         } label: {
                             HStack {
                                 Image(systemName: "dollarsign")
@@ -249,7 +248,7 @@ struct HomeView: View {
                         }
                         // Savings Goals:
                         NavigationLink {
-                            Text("Show Savings Goals Notes here.")
+                            SubCategoryNotesView(category: .finance, subcategory: .savings)
                         } label: {
                             HStack {
                                 Image(systemName: "dollarsign.bank.building")
@@ -270,7 +269,7 @@ struct HomeView: View {
                     DisclosureGroup(isExpanded: $shoppingExpanded) {
                         // Groceries:
                         NavigationLink {
-                            Text("Show Groceries Notes here.")
+                            SubCategoryNotesView(category: .shopping, subcategory: .groceries)
                         } label: {
                             HStack {
                                 Image(systemName: "tray.2")
@@ -280,7 +279,7 @@ struct HomeView: View {
                         }
                         // Gift Ideas:
                         NavigationLink {
-                            Text("Show Gift Ideas Notes here.")
+                            SubCategoryNotesView(category: .shopping, subcategory: .giftIdeas)
                         } label: {
                             HStack {
                                 Image(systemName: "gift")
@@ -301,7 +300,7 @@ struct HomeView: View {
                     // MARK: - Social And Relationships
                     DisclosureGroup(isExpanded: $socialExpanded) {
                         NavigationLink {
-                            Text("Show Friends And Family Notes here.")
+                            SubCategoryNotesView(category: .social, subcategory: .friendsAndFamily)
                         } label: {
                             HStack {
                                 Image(systemName: "figure.2.arms.open")
@@ -311,7 +310,7 @@ struct HomeView: View {
                         }
                         
                         NavigationLink {
-                            Text("Show Date Night Ideas Notes here.")
+                            SubCategoryNotesView(category: .social, subcategory: .dateNightIdeas)
                         } label: {
                             HStack {
                                 Image(systemName: "person.2")
@@ -373,7 +372,7 @@ struct HomeView: View {
                     Spacer()
                     
                     NavigationLink {
-                        AddNoteView()
+                        Text("Add Notes using the button.")
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.title3)

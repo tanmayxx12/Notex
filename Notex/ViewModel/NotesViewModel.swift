@@ -19,17 +19,16 @@ final class NotesViewModel: ObservableObject {
     }
 
     // MARK: - Function to Fetch Notes:
-    func fetchNotes(for subcategory: NoteSubCategory) -> [Note] {
+    func fetchNotes(for subcategory: NoteSubCategory)  { //-> [Note]
         let request = NSFetchRequest<Note>(entityName: "Note")
         request.predicate = NSPredicate(format: "subcategory == %@", subcategory.rawValue)
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Note.timestamp, ascending: false)]
         
         do {
             notes = try context.fetch(request)
-            return notes
         } catch {
             print("There was an error fetching notes: \(error.localizedDescription)")
-            return []
+            notes = []
         }
         
     }
@@ -43,8 +42,9 @@ final class NotesViewModel: ObservableObject {
         newNote.timestamp = Date()
         newNote.category = category.rawValue
         newNote.subcategory = subcategory.rawValue
-        
         save()
+//        notes = fetchNotes(for: subcategory)
+        print("Note saved to \(subcategory)")
     }
     
     
@@ -64,7 +64,7 @@ final class NotesViewModel: ObservableObject {
 // MARK: - Enums for Category and Subcategory:
 enum NoteCategory: String {
     case general = "General Categories"
-    case work = "Work And Productivity"
+    case workAndProductivity = "Work And Productivity"
     case personalAndLifeStyle = "Personal And Lifestyle"
     case health = "Health And Fitness"
     case finance = "Finance And Planning"

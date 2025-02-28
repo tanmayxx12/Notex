@@ -9,8 +9,6 @@ import SwiftUI
 
 struct SubCategoryNotesView: View {
     @EnvironmentObject var viewModel: NotesViewModel
-    @State private var showingAddNoteSheet: Bool = false
-    
     let category: NoteCategory
     let subcategory: NoteSubCategory
     
@@ -32,12 +30,16 @@ struct SubCategoryNotesView: View {
                             NavigationLink {
                                 Text("Note Detail View will come here")
                             } label: {
-                                VStack {
+                                VStack(alignment: .leading) {
                                     Text("\(note.title ?? "")")
                                         .font(.headline)
-                                    Text("\(note.timestamp ?? Date(), style: .date)")
+                                    Text("\(note.content ?? "")")
                                         .font(.caption)
                                         .foregroundStyle(.gray)
+                                    
+//                                    Text("\(note.timestamp ?? Date(), style: .date)")
+//                                        .font(.caption)
+//                                        .foregroundStyle(.gray)
                                 }
                             }
                             
@@ -88,7 +90,7 @@ struct SubCategoryNotesView: View {
                     Spacer()
                     
                     NavigationLink {
-                        AddNoteView()
+                        AddNoteView(category: category, subcategory: subcategory)
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .font(.title3)
@@ -98,15 +100,14 @@ struct SubCategoryNotesView: View {
                 }
                 
             }
-            
         }
         .onAppear {
-//            viewModel.fetchNotes(for: .uncategorized)
+            viewModel.fetchNotes(for: subcategory)
         }
     }
 }
 
 #Preview {
-    SubCategoryNotesView(category: .general, subcategory: .uncategorized)
+    SubCategoryNotesView(category: .health, subcategory: .fitness)
         .environmentObject(NotesViewModel())
 }
