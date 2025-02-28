@@ -14,6 +14,7 @@
 		116D85052D6DEFE400FEF29C /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116D85032D6DEFE400FEF29C /* NotesModel.xcdatamodeld */; };
 		116D85072D6DF01700FEF29C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D85062D6DF01700FEF29C /* CoreDataManager.swift */; };
 		116D85092D6DF0DB00FEF29C /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D85082D6DF0DB00FEF29C /* NotesViewModel.swift */; };
+		1184D10E2D71CF5400BEAE4E /* SubCategoryNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1184D10D2D71CF5400BEAE4E /* SubCategoryNotesView.swift */; };
 		11DD2CB52D6F84D400EEB5CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD2CB42D6F84D400EEB5CC /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		116D85042D6DEFE400FEF29C /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
 		116D85062D6DF01700FEF29C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		116D85082D6DF0DB00FEF29C /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		1184D10D2D71CF5400BEAE4E /* SubCategoryNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryNotesView.swift; sourceTree = "<group>"; };
 		11DD2CB42D6F84D400EEB5CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 			children = (
 				116D84FE2D6DE98600FEF29C /* AddNoteView.swift */,
 				11DD2CB42D6F84D400EEB5CC /* HomeView.swift */,
+				1184D10D2D71CF5400BEAE4E /* SubCategoryNotesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				116D85092D6DF0DB00FEF29C /* NotesViewModel.swift in Sources */,
 				116D84FF2D6DE98600FEF29C /* AddNoteView.swift in Sources */,
 				11DD2CB52D6F84D400EEB5CC /* HomeView.swift in Sources */,
+				1184D10E2D71CF5400BEAE4E /* SubCategoryNotesView.swift in Sources */,
 				116D85072D6DF01700FEF29C /* CoreDataManager.swift in Sources */,
 				116D84F92D6DDC6700FEF29C /* NotexApp.swift in Sources */,
 			);
