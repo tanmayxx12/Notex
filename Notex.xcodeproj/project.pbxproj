@@ -6,17 +6,28 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		116D84F62D6DDC6700FEF29C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D84F02D6DDC6700FEF29C /* Preview Assets.xcassets */; };
+		116D84F72D6DDC6700FEF29C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D84F22D6DDC6700FEF29C /* Assets.xcassets */; };
+		116D84F92D6DDC6700FEF29C /* NotexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D84F42D6DDC6700FEF29C /* NotexApp.swift */; };
+		116D84FF2D6DE98600FEF29C /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D84FE2D6DE98600FEF29C /* AddNoteView.swift */; };
+		116D85052D6DEFE400FEF29C /* NotesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116D85032D6DEFE400FEF29C /* NotesModel.xcdatamodeld */; };
+		116D85072D6DF01700FEF29C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D85062D6DF01700FEF29C /* CoreDataManager.swift */; };
+		116D85092D6DF0DB00FEF29C /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D85082D6DF0DB00FEF29C /* NotesViewModel.swift */; };
+		11DD2CB52D6F84D400EEB5CC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DD2CB42D6F84D400EEB5CC /* HomeView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		116D84DF2D6DDC4300FEF29C /* Notex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		116D84F02D6DDC6700FEF29C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		116D84F22D6DDC6700FEF29C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		116D84F42D6DDC6700FEF29C /* NotexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotexApp.swift; sourceTree = "<group>"; };
+		116D84FE2D6DE98600FEF29C /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		116D85042D6DEFE400FEF29C /* NotesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesModel.xcdatamodel; sourceTree = "<group>"; };
+		116D85062D6DF01700FEF29C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		116D85082D6DF0DB00FEF29C /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		11DD2CB42D6F84D400EEB5CC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		116D84E12D6DDC4300FEF29C /* Notex */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Notex;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		116D84DC2D6DDC4300FEF29C /* Frameworks */ = {
@@ -32,7 +43,7 @@
 		116D84D62D6DDC4300FEF29C = {
 			isa = PBXGroup;
 			children = (
-				116D84E12D6DDC4300FEF29C /* Notex */,
+				116D84F52D6DDC6700FEF29C /* Notex */,
 				116D84E02D6DDC4300FEF29C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +54,53 @@
 				116D84DF2D6DDC4300FEF29C /* Notex.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		116D84F12D6DDC6700FEF29C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				116D84F02D6DDC6700FEF29C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		116D84F52D6DDC6700FEF29C /* Notex */ = {
+			isa = PBXGroup;
+			children = (
+				116D84FC2D6DDD5D00FEF29C /* Manager */,
+				116D84FA2D6DDD4D00FEF29C /* ViewModel */,
+				116D84FD2D6DDD6700FEF29C /* Views */,
+				116D84F12D6DDC6700FEF29C /* Preview Content */,
+				116D84F22D6DDC6700FEF29C /* Assets.xcassets */,
+				116D84F42D6DDC6700FEF29C /* NotexApp.swift */,
+				116D85032D6DEFE400FEF29C /* NotesModel.xcdatamodeld */,
+			);
+			path = Notex;
+			sourceTree = "<group>";
+		};
+		116D84FA2D6DDD4D00FEF29C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				116D85082D6DF0DB00FEF29C /* NotesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		116D84FC2D6DDD5D00FEF29C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				116D85062D6DF01700FEF29C /* CoreDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		116D84FD2D6DDD6700FEF29C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				116D84FE2D6DE98600FEF29C /* AddNoteView.swift */,
+				11DD2CB42D6F84D400EEB5CC /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +117,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				116D84E12D6DDC4300FEF29C /* Notex */,
 			);
 			name = Notex;
 			packageProductDependencies = (
@@ -109,6 +164,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116D84F62D6DDC6700FEF29C /* Preview Assets.xcassets in Resources */,
+				116D84F72D6DDC6700FEF29C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116D85052D6DEFE400FEF29C /* NotesModel.xcdatamodeld in Sources */,
+				116D85092D6DF0DB00FEF29C /* NotesViewModel.swift in Sources */,
+				116D84FF2D6DE98600FEF29C /* AddNoteView.swift in Sources */,
+				11DD2CB52D6F84D400EEB5CC /* HomeView.swift in Sources */,
+				116D85072D6DF01700FEF29C /* CoreDataManager.swift in Sources */,
+				116D84F92D6DDC6700FEF29C /* NotexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +387,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		116D85032D6DEFE400FEF29C /* NotesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				116D85042D6DEFE400FEF29C /* NotesModel.xcdatamodel */,
+			);
+			currentVersion = 116D85042D6DEFE400FEF29C /* NotesModel.xcdatamodel */;
+			path = NotesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 116D84D72D6DDC4300FEF29C /* Project object */;
 }

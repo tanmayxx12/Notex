@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct NotexApp: App {
+    @StateObject var viewModel = NotesViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environmentObject(viewModel)
         }
     }
 }
